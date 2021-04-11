@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+
+    <script src="https://kit.fontawesome.com/5bf93b33ff.js" crossorigin="anonymous"></script>
+    <link defer rel="stylesheet" href="./css/style.css">
+    <script src="js/application.js"></script>
+    <script defer type="module" src="js/app.js"></script>
+    <script defer type="module" src="js/newClient.js"></script>
+    <script defer type="module" src="js/getClients.js"></script>
+    <script defer type="module" src="js/editClient.js"></script>
+    <title>CRM - INDEXEDDB</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1>CRM - INDEXEDDB</h1>
+            <h3>Administra clientes con el CRM - IndexedDB</h3>
+            <div class="sectionSelector">
+                <button id="clientsSectionBtn" class="currentClientsBtn active">Clients</button>
+                <button id="newClientsSectionBtn" class="newClientsBtn">New Client</button>
+            </div>
+        </div>
+
+        <main class="clients">
+            <h2 id="mainHeader">Clients</h2>
+            <div class="message" id="message">Nuevo cliente añadido</div>
+            <section class="currentClients" id="currentClientsSection">
+                <table id="currentClientsTable" class="currentClientsTable" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th>Nombre del cliente</th>
+                        <th>Teléfono</th>
+                        <th>Empresa</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <!-- <tr>
+                        <td>
+                            <div class="name">Juanjo</div>
+                            <div class="email">juan@jo.com</div>
+                        </td>
+                        <td>
+                            +55 555 555 5555
+                        </td>
+                        <td>
+                            CodeDocker
+                        </td>
+                        <td class="editRow">
+                            <button class="editClient"><i class="fas fa-pen"></i></button>
+                            <button class="removeClient"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="name">Miguel</div>
+                            <div class="email">Migue@l.com</div>
+                        </td>
+                        <td>
+                            +44 444 444 4444
+                        </td>
+                        <td>
+                            FilletDesign Co.
+                        </td>
+                        <td class="editRow">
+                            <button class="editClient"><i class="fas fa-pen"></i></button>
+                            <button class="removeClient"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr> -->
+                </table>
+            </section>
+            <section class="newClient" id="newClientSection">
+                <form data-function="add" action="#" id="newClientForm">
+                    <fieldset>
+                        <label class="">Nombre</label>
+                        <input id="name" type="text">
+                        <i class="fas fa-id-card"></i>
+                    </fieldset>
+                    <fieldset>
+                        <label>Correo</label>
+                        <input id="email" type="text">
+                        <i class="fas fa-envelope-square"></i>
+                    </fieldset>
+                    <fieldset>
+                        <label>Teléfono</label>
+                        <input id="phone" type="text">
+                        <i class="fas fa-phone-square-alt"></i>
+                    </fieldset>
+                    <fieldset>
+                        <label>Empresa</label>
+                        <input id="company" type="text">
+                        <i class="fas fa-building"></i>
+                    </fieldset>
+
+                    <input type="submit" value="Agregar nuevo cliente" class="newClientBtn">
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
